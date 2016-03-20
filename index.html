@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>Home Page</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<style type="text/css">
+.btn:after {
+    font-family: "Glyphicons Halflings";
+    content: "\e114";
+}
+
+.btn.collapsed:after {
+    content: "\e080";
+}
+</style>
+<script type="text/javascript">
+ // toggle specific
+ function toggleDiv(id1,id2) {
+  var tag = document.getElementById(id1).style;
+  var tagicon = document.getElementById(id2);
+
+  if(tag.display == "none") {
+   tag.display = "block";
+   tagicon.innerHTML = "&nbsp;-&nbsp;";
+  } else {
+   tag.display = "none";
+   tagicon.innerHTML = "&nbsp;+&nbsp;";
+  }
+ }
+
+ function expandAll(cnt) {
+  for(var x=1; x<=cnt; x++) {
+    document.getElementById('content'+x).style.display="block";
+    document.getElementById('icon'+x).innerHTML="&nbsp;-&nbsp;";  
+  }
+ }
+
+ function collapseAll(cnt) {
+  for(var x=1; x<=cnt; x++) {
+    document.getElementById('content'+x).style.display="none";
+    document.getElementById('icon'+x).innerHTML="&nbsp;+&nbsp;";  
+  }
+ }
+
+</script>
+
+<style type="text/css">
+
+
+</style>
+
+
+</head>
+<body style="margin: 0px; background:#efefef;">
+<div class="container">
+<div class="header">
+<div class="logo">
+<img src="img/logo.png" width="200px" style="margin-left: 26px; margin-top: 9px;" />
+</div>
+<div class="title1">
+<h1 >Welcome to My Website</h1>
+</div>
+</div>
+<div class="nav">
+ <ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul> 
+</div>
+<div class="body">
+<div class="left">
+<h1>Welcome to Website</h1>
+<p style="text-align:justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
+<p style="text-align:justify;"><img src="img/fjords.jpg" alt="Fjords" style="border-radius: 120px; margin-left: 55px; box-shadow: -6px 0px 12px 7px rgb(204, 204, 204);"  width="200" height="200">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+
+
+
+<div class="left-bottom">
+<div class="img">
+  <a target="_blank" href="img/fjords.jpg">
+    <img src="img/fjords.jpg" alt="Fjords" width="200" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="img/forest.jpg">
+    <img src="img/forest.jpg" alt="Forest" width="200" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="lights.jpg">
+    <img src="img/lights.jpg" alt="Northern Lights" width="200" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="img">
+  <a target="_blank" href="img/mountains.jpg">
+    <img src="img/mountains.jpg" alt="Mountains" width="200" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+</div>
+</div>
+<div class="right">
+<div class="right-menu">
+ <ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Contact</a></li>
+</ul> 
+</div>
+	<br/><br/>
+<div class="title" onClick="javascript:toggleDiv('content1','icon1');">
+  <span style="float:left">Sample Title 1</span>
+  <span id="icon1" style="float:right">&nbsp;-&nbsp;</span> 
+ </div>
+ <div id="content1" class="item">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+ </div>
+ <div class="title" onClick="javascript:toggleDiv('content2','icon2');">
+  <span style="float:left">Sample Title 2</span>
+  <span id="icon2" style="float:right">&nbsp;-&nbsp;</span> 
+ </div>
+ <div id="content2" class="item">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+ </div>
+	
+</div>
+</div>
+</div>
+
+<div class="footer">
+<p class="copy">copyrights @ 2016.</p>
+</div>
+</body>
+</html>
